@@ -1,0 +1,25 @@
+
+<h2>Activities</h2>
+
+
+
+<div *ngFor="let activity of activities">
+  <h3>
+      <!--  <a [title]="activity.name + ' details'" href="" (click)="share(activity.name)"> -->
+        <a [title]="activity.name + ' details'"  [routerLink]="['/ActivityHierarchy',activity.id]" routerLinkActive="active">
+      {{ activity.name }}
+
+    </a>
+
+
+  </h3>
+  <p *ngIf="activity.description">
+    Description: {{ activity.description }}
+  </p>
+  <!-- <button (click)="share()">
+    Share
+  </button>
+ -->
+ <!-- <app-activity-hierarchy  [activity]="activity"  (notify)="onNotify()" >
+</app-activity-hierarchy> -->
+</div>

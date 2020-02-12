@@ -1,0 +1,18 @@
+<h2>Activities Hierarchy</h2>
+
+ <p *ngIf="preDecessor">
+ PreDecessor: {{preDecessor.name}}
+PreDecessor Id: {{preDecessor.id}}
+PreDecessor Desc: {{preDecessor.description}} <br>
+</p>
+Current Activity : {{activity.name}}
+Activity Id : {{ activity.id}}
+Activity Desc : {{ activity.description}}<br>
+<p *ngIf="successor">
+Successor: {{successor.name}}
+Successor Id: {{successor.id}}
+Successor Desc: {{successor.description}}
+</p>
+<p>
+    <a class='btn btn-default' (click)="onBack()">Back </a>
+</p>
